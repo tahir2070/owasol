@@ -176,10 +176,17 @@ body.home{
     border-radius: 5px;
 }
 .sidebar .menu a span{font-size: 28px; margin-left: 20px;}
-.sidebar .menu a:hover,
+
+.sidebar .menu a:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+/*Sidebar Active*/
 .sidebar .menu a.active{
     background-color: rgba(255,255,255,0.1);
 }
+.sidebar .menu a.active span{display: block;font-size: 28px; margin-left: 70px; margin-top: -55px;}
+.sidebar .menu a.active small{margin-left: 70px; margin-top: -5px;}
 
 
 @media screen and (max-width: 600px) {
@@ -208,6 +215,13 @@ body.home{
     .sidebar .menu{
         width: 100%;
     }
+
+    /*Sidebar Active*/
+    .sidebar .menu a.active{
+        background-color: rgba(255,255,255,0.1);
+    }
+    .sidebar .menu a.active span{display: inline;font-size: 28px; margin-left: 20px;}
+    .sidebar .menu a.active small{margin-left: 50px; margin-top: -5px;}
 }
 
 @media only screen and (max-width: 1100px) and (min-width: 600px) {
@@ -259,6 +273,9 @@ body.home{
     color: var(--web-color);
     font-size: 22px;
     font-weight: bold;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
 }
 
 @media screen and (max-width: 600px) {
@@ -504,36 +521,48 @@ body.home{
     overflow: hidden !important;
     text-align: center;
     cursor: pointer;
-    border: 0px !important;
+    border: 1px solid var(--secondary) !important;
     padding: 20px 0px;
     -webkit-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.5);
-    background-color: var(--light);
+    background-color: rgba(255,255,255,0.06);
     transition: all 0.5s ease-in-out;
     margin-bottom: 20px;
 }
 
 .team .member .profile-img img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 3px solid var(--web-color);
     border-radius: 2000px;
     display: block;
     margin: auto;
     transition: all 0.5s ease-in-out;
 }
+
+.team .member .member-info i{
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 4px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+}
 .team .member .member-info{
     width: 100%;
     padding: 10px 10px;
-    color: var(--web-color);
+    color: white;
     transition: all 0.5s ease-in-out;
+    text-align: left !important;
 }
 
 
 @media screen and (max-width: 600px) {
     .team .col-md-3{
-        width: 50%;
         margin-bottom: 10px !important;
     }
     #team .container-fluid .section-content{
