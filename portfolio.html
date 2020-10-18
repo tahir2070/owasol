@@ -258,20 +258,26 @@
 
     <!-- The Modal -->
     <div class="modal fade" id="galleryModal">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
-                <img class="w-100" src="media/gallery/better_choice_repairs/1.png" alt="">
-                <div class="project-content p-4">
-                    <h5 class="name"><b>Project Name:</b> Better Choice Repairs</h5>
-                    <h6 class="tech">
-                        <b>Technologies Used:</b>
-                        <span class="badge badge-success">HTML-5</span>
-                        <span class="badge badge-success">CSS-3</span>
-                        <span class="badge badge-success">jQuery</span>
-                        <span class="badge badge-success">Boostrap-4</span>
-                        <span class="badge badge-success">Datatable</span>
-                    </h6>
+                <button type="button" class="btn-close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="w-100 img-thumbnail" src="media/gallery/better_choice_repairs/1.png" alt="">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-content py-2 px-1">
+                            <h3 class="name text-dark">Better Choice Repairs</h3>
+                            <h6 class="tech text-dark">
+                                <strong class="mb-2">Technologies Used:</strong>
+                                <span class="badge p-1 text-white" style="background-color: orangered;">HTML-5</span>
+                                <span class="badge p-1 badge-primary">CSS-3</span>
+                                <span class="badge p-1 badge-info">jQuery</span>
+                                <span class="badge p-1 text-white" style="background-color: purple;">Boostrap 4</span>
+                                <span class="badge badge-success" style="background-color: blue;">Datatable</span>
+                            </h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -327,7 +333,7 @@
         // Display image on modal
         $(document).on('click', '.gallery .pics img', function () {
             $('#galleryModal img').attr("src", "" + this.src + "");
-            $('#galleryModal .name').html("<b>Project Name: </b>" + this.alt);
+            $('#galleryModal .name').html(this.alt);
             $('#galleryModal').modal('show');
         });
     </script>

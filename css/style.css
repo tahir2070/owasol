@@ -27,6 +27,9 @@
     color: white;
 }
 
+strong{display: block;}
+
+
 .navbar{
     -webkit-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.75);
@@ -343,7 +346,7 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
 
 .services .service{
     border: 1px solid rgba(255,255,255,0.9);
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.1);
     padding: 20px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -369,13 +372,13 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
 }
 
 .services .service .title{
-    color: black;
+    color: white;
     font-size: 22px;
     margin-top: 4px;
 }
 
 .services .service .border{
-    border: 2px solid var(--web-color) !important;
+    border: 2px solid white !important;
     border-radius: 999px;
     margin: 8px 0px;
     width: 70px;
@@ -384,15 +387,16 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
 .services .service li{
     margin-left: 20px;
     position: relative;
+    color: white;
 }
 .services .service li .dot{
     display: block;
     position: absolute;
-    border: 1px solid var(--web-color);
+    border: 1px solid white;
     padding: 1px 1px;
     width: 10px !important;
     height: 10px !important;
-    background-color: var(--web-color);
+    background-color: transparent;
     left: -20px;
     top: 7px;
 }
@@ -818,6 +822,7 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
     padding: 30px 0px;
     color: white;
     position: relative;
+    background-color: var(--web-color);
 }
 
 .footer .container-fluid{
@@ -972,4 +977,32 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
 .custom-radio input[type="radio"]:checked+label{
     background-color: white;
     color: var(--web-color);
+}
+
+#galleryModal .modal-content{
+    background-color: white !important;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+#galleryModal .modal-content img{
+    border-radius: 20px;
+}
+#galleryModal .btn-close{
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    outline: none;
+    border: 1px solid #dc3545;
+    font-size: 24px !important;
+    background-color: #dc3545;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    z-index: 1000000;
+}
+#galleryModal .btn-close:hover{
+    background-color: #ad2633;
+    border-color: #ad2633;
 }
